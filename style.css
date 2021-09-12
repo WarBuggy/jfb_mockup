@@ -172,6 +172,21 @@ div.ui-standard-home-zoom {
     cursor: pointer;
 }
 
+div.ui-standard-home-member {
+    position: absolute;
+    left: 16px;
+    bottom: 80px;
+    width: 48px;
+    height: 48px;
+    background-color: burlywood;
+    font-size: 12px;
+    font-weight: bold;
+    display: grid;
+    align-content: center;
+    text-align: center;
+    cursor: pointer;
+}
+
 div.ui-standard-home-buy {
     position: absolute;
     width: 64px;
