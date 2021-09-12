@@ -1,0 +1,396 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <!-- Link preview -->
+    <meta name="description" content="(mockup) JFB">
+    <meta name="keywords" content="Joyful Family Banking">
+    <!--
+    <meta property="og:image" content="res/img/logo_square.png" />
+    <link rel="image_src" href="res/img/logo_square.png" />
+    -->
+    <!-- View port meta-->
+    <meta name="viewport" content="initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, width=device-width, user-scalable=no, minimal-ui" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="full-screen" content="yes" />
+    <!-- favicon -->
+    <!--
+    <link rel="shortcut icon" href="res/img/favicon.ico" type="image/x-icon">
+    <link rel="icon" href="res/img/favicon.ico" type="image/x-icon">
+    -->
+    <title>(mockup) JFB</title>
+    <!-- CSS -->
+    <link rel="stylesheet" type="text/css" href="style.css?0.1" />
+    <!-- COMMON SCRIPT -->
+    <!-- <script src="script/common.js?version=1.0"></script> -->
+    <!-- SCRIPT -->
+    <script src="index.js?0.1"></script>
+</head>
+
+<body>
+    <div style='width: 100%; height: 100%; overflow-y: auto;'>
+        <h1 style='margin-top: 30px; margin-left: auto; margin-right: auto; width: 100%; text-align: center;'>
+            BƯỚC 1: CHỌN KHU PHỐ
+        </h1>
+        <div style='display: grid; grid-template-rows: auto auto auto auto; align-content: center; grid-row-gap: 16px;
+            margin-left: auto; margin-right: auto; width: 320px; height: 650px; border: 1px solid black;'>
+            <h4 style='margin-left: auto; margin-right: auto; margin-top: 0px; width: 100%; text-align: center;'>
+                Chỉ còn vài bước nữa là bạn đã có thể làm chủ sở hữu một căn nhà ở thành phố Á Châu.
+                <br>Xin bạn vui lòng chọn khu phố mà bạn muốn cư ngụ!
+            </h4>
+            <select style='justify-self: center; width: 200px; text-align: center;'>
+                <option>Xin chọn khu phố!</option>
+                <option>Hạnh Phúc</option>
+                <option>Thịnh Vượng</option>
+                <option>Tài Lộc</option>
+                <option>An Nhàn</option>
+                <option>Hoàn Mỹ</option>
+            </select>
+            <button style='justify-self: center; width: 200px;'>
+                Tôi muốn đặt nhà ở đây
+            </button>
+        </div>
+
+        <h1 style='margin-top: 30px; margin-left: auto; margin-right: auto; width: 100%; text-align: center;'>
+            BƯỚC 2: ĐẶT TÊN CHO TỔ ẤM
+        </h1>
+        <h5 style='margin-left: auto; margin-right: auto; margin-top: 0px; width: 100%; text-align: center;'>
+            Hình toàn cảnh căn nhà. Âm thanh hoan hô vỗ tay.
+            <br>Nhạc hân hoan
+            <br>Từ từ zoom in vào phòng khách (phòng khách nằm ngay trọng tâm ngôi nhà).
+            <br>Khi đã zoom xong, hiện lên popup.
+        </h5>
+        <div style='display: grid; grid-template-rows: auto auto auto auto; align-content: center; grid-row-gap: 16px;
+            margin-left: auto; margin-right: auto; width: 320px; height: 650px; border: 1px solid black;'>
+            <h4 style='margin-left: auto; margin-right: auto; margin-top: 0px; width: 100%; text-align: center;'>
+                Xin chúc mừng! Quyền sở hửu căn nhà số 249743, phố Hạnh Phúc đã thuộc về bạn.
+                <br><br> Hãy đặt tên cho tổ ấm mới!
+                <br> (Bạn có thể đổi tên này bất cứ lúc nào)
+            </h4>
+            <input style='width: 200px; justify-self: center;' placeholder="Tối đa 40 ký tự" value='Tổ ấm của <tên của thành viên chủ hộ>'>
+            <button style='justify-self: center; width: 200px;'>
+                Tham quan nhà mới!
+            </button>
+        </div>
+
+        <h1 style='margin-top: 30px; margin-left: auto; margin-right: auto; width: 100%; text-align: center;'>
+            MÀN HÌNH CHÍNH
+        </h1>
+        <div style='display: grid; grid-template-rows: auto auto auto auto; align-content: center; grid-row-gap: 16px;
+            margin-left: auto; margin-right: auto; width: 320px; height: 600px; border: 1px solid black; position: relative;'>
+            <div class='ui-standard-home-detail'>
+                <div id='divHomeName' class='ui-standard-home-detail-name' onclick='showHomeNameEdit(event)'>Mái ấm gia đình hạnh phúc của bé Ngọc Hà (edit)</div>
+                <div class='ui-standard-home-detail-address'>Số 249743, Hạnh Phúc</div>
+            </div>
+            <div class='ui-standard-home-like-grid'>
+                <div class='ui-standard-home-like-icon' onclick='alert("Icon hình trái tim")'>Icon like
+                </div>
+                <div class='ui-standard-home-like-amount' onclick='alert("Số lượng like đã nhận được của căn nhà này")'>
+                    88888</div>
+            </div>
+            <div class='ui-standard-home-value-grid'>
+                <div class='ui-standard-home-value-icon' onclick='alert("Icon hình coin / tiền")'>Icon value
+                </div>
+                <div class='ui-standard-home-value-amount' onclick='alert("Tổng gía trị căn nhà")'>
+                    2.5M</div>
+            </div>
+            <div class='ui-standard-home-zoom' onclick='zoomOnClick(event);'>Phóng to</div>
+            <div class='ui-standard-home-buy' onclick='buyOnClick(event);'>Mua /<br>Nâng cấp</div>
+            <div class='ui-standard-home-visit' onclick='visitOnClick(event);'>Thăm</div>
+            <div class='ui-standard-home-share' onclick='shareOnClick(event);'>Chia sẻ</div>
+        </div>
+
+    </div>
+
+    <div id='divOverlay' class='overlay'>
+        <div id='divChangeName' class='ui-standard-home-change-name'>
+            <div class='ui-standard-home-change-name-label'>Tên tổ ấm (tối đa 40 ký tự)</div>
+            <input id='inputChangeName' class='ui-standard-home-change-name-input'>
+            <button class='ui-standard-home-change-button' onclick='hideDivChangeName()'>Hủy</button>
+            <button class='ui-standard-home-change-button' onclick='hideDivChangeName()'>Cập nhật</button>
+        </div>
+
+        <div id='divSharePopup' class='ui-standard-home-share-popup'>
+            <div class='ui-standard-home-share-popup-image'>
+                <div class='ui-standard-home-share-popup-name'>Mái ấm gia đình hạnh phúc của bé Ngọc Hà</div>
+                <div class='ui-standard-home-share-popup-address'>Số 249743, Hạnh Phúc</div>
+                <div class='ui-standard-home-share-popup-logo-acb'>Logo ACB</div>
+                <div class='ui-standard-home-share-popup-ref'>MGT: JAKNDAK</div>
+                <div class='ui-standard-home-share-popup-desc'>Toàn cảnh căn nhà (1200 x 630)</div>
+                <div id='divSharePopupLike' class='ui-standard-home-share-popup-icon'></div>
+                <div id='divSharePopupLikeQuantity' class='ui-standard-home-share-popup-quantity'>88888</div>
+            </div>
+            <textarea class='ui-standard-home-share-popup-ta'>Tổ ấm của {tên TK chủ hộ} trên app ngân hàng ACB!</textarea>
+            <div class='ui-standard-home-share-popup-show-like'>
+                <input id='inputSharePopupShowLike' type='checkbox' onchange='onSharePopupShowChange(event)' checked>
+                <label for='inputSharePopupShowLike'>Hiển thị số thả tim</label>
+            </div>
+            <button class='ui-standard-home-share-popup-button'>FB</button>
+            <button class='ui-standard-home-share-popup-button' style='justify-self: center;'>Zalo</button>
+            <button class='ui-standard-home-share-popup-button' style='justify-self: end;'>Link</button>
+            <button class='ui-standard-home-share-popup-button-close' onclick='hideDivSharePopup()'>Đóng</button>
+        </div>
+
+        <div id='divHomeVisitPopup' class='ui-standard-home-visit-popup'>
+            <div style='display: grid; grid-template-rows: auto 1fr;'>
+                <div>
+                    <div class='ui-standard-home-visit-popup-category'>
+                        <div id='divHomeVisitPopupSearchAddress' class='ui-standard-home-visit-popup-category-item selected' onclick='visitSearchCategoryOnClick(event);'>
+                            <div>Tìm theo địa chỉ</div>
+                        </div>
+                        <div class='ui-standard-home-visit-popup-category-item' onclick='visitSearchCategoryOnClick(event);'>
+                            <div>Được yêu thích nhất</div>
+                        </div>
+                        <div class='ui-standard-home-visit-popup-category-item' onclick='visitSearchCategoryOnClick(event);'>
+                            <div>Giá trị lớn nhất</div>
+                        </div>
+                        <div class='ui-standard-home-visit-popup-category-item' onclick='visitSearchCategoryOnClick(event);'>
+                            <div>Gây nhiều chú ý gần đây</div>
+                        </div>
+                        <div class='ui-standard-home-visit-popup-category-item' onclick='visitSearchCategoryOnClick(event);'>
+                            <div>Rằm Trung Thu 2021</div>
+                        </div>
+                        <div class='ui-standard-home-visit-popup-category-item' onclick='visitSearchCategoryOnClick(event);'>
+                            <div>Tựu trường 2021</div>
+                        </div>
+                    </div>
+                    <div id='divHomeVisitPopupSearch' class='ui-standard-home-visit-popup-category-search'>
+                        <div>Số nhà</div>
+                        <input id='inputHomeVisitPopupSearchAddress' onkeyup='inputHomeVisitPopupSearchOnKeyup(event)'>
+                        <div>Tên đường</div>
+                        <select style='justify-self: center; width: 100%;'>
+                            <option>Bât kỳ</option>
+                            <option>Hạnh Phúc</option>
+                            <option>Thịnh Vượng</option>
+                            <option>Tài Lộc</option>
+                            <option>An Nhàn</option>
+                            <option>Hoàn Mỹ</option>
+                        </select>
+                    </div>
+                </div>
+                <div>
+                    <div id='divHomeVisitPopupSearchResultFive' class='ui-standard-home-visit-popup-category-search-result' style='height: 255px;'>
+                        <div class='ui-standard-home-visit-popup-category-search-result-item'>
+                            <div class='ui-standard-home-visit-popup-category-search-result-item-home-detail'>
+                                <div>Tổ ấm của Hưng</div>
+                                <div>Số 78234, đường Hoàn Mỹ</div>
+                            </div>
+                            <div class='ui-standard-home-visit-popup-category-search-result-item-value-icon'>
+                            </div>
+                            <div class='ui-standard-home-visit-popup-category-search-result-item-value-text'>
+                                1.3M
+                            </div>
+                            <div class='ui-standard-home-visit-popup-category-search-result-item-like-icon' onclick='vistSearchResultItemLikeOnClick(event)'>
+                            </div>
+                            <div class='ui-standard-home-visit-popup-category-search-result-item-like-text' onclick='vistSearchResultItemLikeOnClick(event)'>3546
+                            </div>
+                        </div>
+                        <div class='ui-standard-home-visit-popup-category-search-result-item'>
+                            <div class='ui-standard-home-visit-popup-category-search-result-item-home-detail'>
+                                <div>Tổ ấm của Hưng</div>
+                                <div>Số 78234, đường Hoàn Mỹ</div>
+                            </div>
+                            <div class='ui-standard-home-visit-popup-category-search-result-item-value-icon'>
+                            </div>
+                            <div class='ui-standard-home-visit-popup-category-search-result-item-value-text'>
+                                1.3M
+                            </div>
+                            <div class='ui-standard-home-visit-popup-category-search-result-item-like-icon' onclick='vistSearchResultItemLikeOnClick(event)'>
+                            </div>
+                            <div class='ui-standard-home-visit-popup-category-search-result-item-like-text' onclick='vistSearchResultItemLikeOnClick(event)'>3546
+                            </div>
+                        </div>
+                        <div class='ui-standard-home-visit-popup-category-search-result-item'>
+                            <div class='ui-standard-home-visit-popup-category-search-result-item-home-detail'>
+                                <div>Tổ ấm của Hưng</div>
+                                <div>Số 78234, đường Hoàn Mỹ</div>
+                            </div>
+                            <div class='ui-standard-home-visit-popup-category-search-result-item-value-icon'>
+                            </div>
+                            <div class='ui-standard-home-visit-popup-category-search-result-item-value-text'>
+                                1.3M
+                            </div>
+                            <div class='ui-standard-home-visit-popup-category-search-result-item-like-icon' onclick='vistSearchResultItemLikeOnClick(event)'>
+                            </div>
+                            <div class='ui-standard-home-visit-popup-category-search-result-item-like-text' onclick='vistSearchResultItemLikeOnClick(event)'>3546
+                            </div>
+                        </div>
+                        <div class='ui-standard-home-visit-popup-category-search-result-item'>
+                            <div class='ui-standard-home-visit-popup-category-search-result-item-home-detail'>
+                                <div>Tổ ấm của Hưng</div>
+                                <div>Số 78234, đường Hoàn Mỹ</div>
+                            </div>
+                            <div class='ui-standard-home-visit-popup-category-search-result-item-value-icon'>
+                            </div>
+                            <div class='ui-standard-home-visit-popup-category-search-result-item-value-text'>
+                                1.3M
+                            </div>
+                            <div class='ui-standard-home-visit-popup-category-search-result-item-like-icon' onclick='vistSearchResultItemLikeOnClick(event)'>
+                            </div>
+                            <div class='ui-standard-home-visit-popup-category-search-result-item-like-text' onclick='vistSearchResultItemLikeOnClick(event)'>3546
+                            </div>
+                        </div>
+                        <div class='ui-standard-home-visit-popup-category-search-result-item'>
+                            <div class='ui-standard-home-visit-popup-category-search-result-item-home-detail'>
+                                <div>Tổ ấm của Hưng</div>
+                                <div>Số 78234, đường Hoàn Mỹ</div>
+                            </div>
+                            <div class='ui-standard-home-visit-popup-category-search-result-item-value-icon'>
+                            </div>
+                            <div class='ui-standard-home-visit-popup-category-search-result-item-value-text'>
+                                1.3M
+                            </div>
+                            <div class='ui-standard-home-visit-popup-category-search-result-item-like-icon' onclick='vistSearchResultItemLikeOnClick(event)'>
+                            </div>
+                            <div class='ui-standard-home-visit-popup-category-search-result-item-like-text' onclick='vistSearchResultItemLikeOnClick(event)'>3546
+                            </div>
+                        </div>
+                    </div>
+                    <div id='divHomeVisitPopupSearchResultMulti' class='ui-standard-home-visit-popup-category-search-result' style='height: 380px;'>
+                        <div class='ui-standard-home-visit-popup-category-search-result-item'>
+                            <div class='ui-standard-home-visit-popup-category-search-result-item-home-detail'>
+                                <div>Tổ ấm của Hưng</div>
+                                <div>Số 78234, đường Hoàn Mỹ</div>
+                            </div>
+                            <div class='ui-standard-home-visit-popup-category-search-result-item-value-icon'>
+                            </div>
+                            <div class='ui-standard-home-visit-popup-category-search-result-item-value-text'>
+                                1.3M
+                            </div>
+                            <div class='ui-standard-home-visit-popup-category-search-result-item-like-icon' onclick='vistSearchResultItemLikeOnClick(event)'>
+                            </div>
+                            <div class='ui-standard-home-visit-popup-category-search-result-item-like-text' onclick='vistSearchResultItemLikeOnClick(event)'>3546
+                            </div>
+                        </div>
+                        <div class='ui-standard-home-visit-popup-category-search-result-item'>
+                            <div class='ui-standard-home-visit-popup-category-search-result-item-home-detail'>
+                                <div>Tổ ấm của Hưng</div>
+                                <div>Số 78234, đường Hoàn Mỹ</div>
+                            </div>
+                            <div class='ui-standard-home-visit-popup-category-search-result-item-value-icon'>
+                            </div>
+                            <div class='ui-standard-home-visit-popup-category-search-result-item-value-text'>
+                                1.3M
+                            </div>
+                            <div class='ui-standard-home-visit-popup-category-search-result-item-like-icon' onclick='vistSearchResultItemLikeOnClick(event)'>
+                            </div>
+                            <div class='ui-standard-home-visit-popup-category-search-result-item-like-text' onclick='vistSearchResultItemLikeOnClick(event)'>3546
+                            </div>
+                        </div>
+                        <div class='ui-standard-home-visit-popup-category-search-result-item'>
+                            <div class='ui-standard-home-visit-popup-category-search-result-item-home-detail'>
+                                <div>Tổ ấm của Hưng</div>
+                                <div>Số 78234, đường Hoàn Mỹ</div>
+                            </div>
+                            <div class='ui-standard-home-visit-popup-category-search-result-item-value-icon'>
+                            </div>
+                            <div class='ui-standard-home-visit-popup-category-search-result-item-value-text'>
+                                1.3M
+                            </div>
+                            <div class='ui-standard-home-visit-popup-category-search-result-item-like-icon' onclick='vistSearchResultItemLikeOnClick(event)'>
+                            </div>
+                            <div class='ui-standard-home-visit-popup-category-search-result-item-like-text' onclick='vistSearchResultItemLikeOnClick(event)'>3546
+                            </div>
+                        </div>
+                        <div class='ui-standard-home-visit-popup-category-search-result-item'>
+                            <div class='ui-standard-home-visit-popup-category-search-result-item-home-detail'>
+                                <div>Tổ ấm của Hưng</div>
+                                <div>Số 78234, đường Hoàn Mỹ</div>
+                            </div>
+                            <div class='ui-standard-home-visit-popup-category-search-result-item-value-icon'>
+                            </div>
+                            <div class='ui-standard-home-visit-popup-category-search-result-item-value-text'>
+                                1.3M
+                            </div>
+                            <div class='ui-standard-home-visit-popup-category-search-result-item-like-icon' onclick='vistSearchResultItemLikeOnClick(event)'>
+                            </div>
+                            <div class='ui-standard-home-visit-popup-category-search-result-item-like-text' onclick='vistSearchResultItemLikeOnClick(event)'>3546
+                            </div>
+                        </div>
+                        <div class='ui-standard-home-visit-popup-category-search-result-item'>
+                            <div class='ui-standard-home-visit-popup-category-search-result-item-home-detail'>
+                                <div>Tổ ấm của Hưng</div>
+                                <div>Số 78234, đường Hoàn Mỹ</div>
+                            </div>
+                            <div class='ui-standard-home-visit-popup-category-search-result-item-value-icon'>
+                            </div>
+                            <div class='ui-standard-home-visit-popup-category-search-result-item-value-text'>
+                                1.3M
+                            </div>
+                            <div class='ui-standard-home-visit-popup-category-search-result-item-like-icon' onclick='vistSearchResultItemLikeOnClick(event)'>
+                            </div>
+                            <div class='ui-standard-home-visit-popup-category-search-result-item-like-text' onclick='vistSearchResultItemLikeOnClick(event)'>3546
+                            </div>
+                        </div>
+                        <div class='ui-standard-home-visit-popup-category-search-result-item'>
+                            <div class='ui-standard-home-visit-popup-category-search-result-item-home-detail'>
+                                <div>Tổ ấm của Hưng</div>
+                                <div>Số 78234, đường Hoàn Mỹ</div>
+                            </div>
+                            <div class='ui-standard-home-visit-popup-category-search-result-item-value-icon'>
+                            </div>
+                            <div class='ui-standard-home-visit-popup-category-search-result-item-value-text'>
+                                1.3M
+                            </div>
+                            <div class='ui-standard-home-visit-popup-category-search-result-item-like-icon' onclick='vistSearchResultItemLikeOnClick(event)'>
+                            </div>
+                            <div class='ui-standard-home-visit-popup-category-search-result-item-like-text' onclick='vistSearchResultItemLikeOnClick(event)'>3546
+                            </div>
+                        </div>
+                        <div class='ui-standard-home-visit-popup-category-search-result-item'>
+                            <div class='ui-standard-home-visit-popup-category-search-result-item-home-detail'>
+                                <div>Tổ ấm của Hưng</div>
+                                <div>Số 78234, đường Hoàn Mỹ</div>
+                            </div>
+                            <div class='ui-standard-home-visit-popup-category-search-result-item-value-icon'>
+                            </div>
+                            <div class='ui-standard-home-visit-popup-category-search-result-item-value-text'>
+                                1.3M
+                            </div>
+                            <div class='ui-standard-home-visit-popup-category-search-result-item-like-icon' onclick='vistSearchResultItemLikeOnClick(event)'>
+                            </div>
+                            <div class='ui-standard-home-visit-popup-category-search-result-item-like-text' onclick='vistSearchResultItemLikeOnClick(event)'>3546
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <button class='ui-standard-home-visit-popup-button-close' onclick='hideDivVisitPopup()'>Đóng</button>
+        </div>
+    </div>
+
+
+
+    </div>
+    <!--
+    <div style=' width: 100; height: 100%; overflow-y: auto; '>
+                    <h1
+                        style='margin-top: 30px; margin-left: auto; margin-right: auto; width: 100%; text-align: center; '>
+                        BẮT ĐẦU PHẦN TUTORIAL CHO GAME
+                    </h1>
+                    <div
+                        style='display: grid; grid-template-rows: auto auto auto auto; align-content: center; grid-row-gap: 16px; margin-left: auto; margin-right: auto; width: 320px; height: 650px; border: 1px solid black; position: relative; '>
+                        <div style='position: absolute '>Tổ ấm của Tú</div>
+                    </div>
+                </div>
+
+                <div style='width: 100; height: 100%; overflow-y: auto; '>
+                    <h1
+                        style='margin-top: 30px; margin-left: auto; margin-right: auto; width: 100%; text-align: center; '>
+                        KHI NHẤN VÀO BIỂU TƯỢNG CÓ QUÀ
+                    </h1>
+                    <div style='display: grid; align-content: center; grid-row-gap: 16px; margin-left: auto; margin-right: auto; width: 320px; height: 650px; border: 1px solid black; '>
+                        <div class='gift-box-popup '>
+                            <h4 style='justify-self: center; '>QUÀ TẶNG</h4>
+                            <div class='gift-box-item '>
+                                <div class='gift-box-item-icon '><span>Icon cho loại quà</span></div>
+                                <div class='gift-box-item-text '>Quà tân gia từ ACB</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                -->
+</body>
+
+</html>
