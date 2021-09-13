@@ -75,13 +75,20 @@
         </div>
 
         <h1 style='margin-top: 30px; margin-left: auto; margin-right: auto; width: 100%; text-align: center;'>
-            MÀN HÌNH CHÍNH
+            MÀN HÌNH CHÍNH (TƯƠNG TÁC ĐƯỢC)
         </h1>
-        <div style='display: grid; grid-template-rows: auto auto auto auto; align-content: center; grid-row-gap: 16px;
-            margin-left: auto; margin-right: auto; width: 320px; height: 600px; border: 1px solid black; position: relative;'>
+        <div style='display: grid; grid-template-rows: auto auto auto auto; align-content: center; grid-row-gap: 16px; overflow: hidden;
+            margin-left: auto; margin-right: auto; width: 320px; height: 600px; border: 1px solid black; position: 
+            relative; background-color: black; color: white;'>
+            <div id='divHomeView' class='ui-standard-home-view'></div>
             <div class='ui-standard-home-detail'>
                 <div id='divHomeName' class='ui-standard-home-detail-name' onclick='showHomeNameEdit(event)'>Mái ấm gia đình hạnh phúc của bé Ngọc Hà (edit)</div>
                 <div class='ui-standard-home-detail-address'>Số 249743, Hạnh Phúc</div>
+                <div class='ui-standard-home-detail-credit-grid'>
+                    <div class='ui-standard-home-detail-credit-grid-icon'></div>
+                    <div class='ui-standard-home-detail-credit-grid-value'>130K</div>
+                    <div class='ui-standard-home-detail-credit-grid-value-hint'>(số tiền ảo đang có)</div>
+                </div>
             </div>
             <div class='ui-standard-home-like-grid'>
                 <div class='ui-standard-home-like-icon' onclick='alert("Icon hình trái tim")'>Icon like
@@ -95,13 +102,317 @@
                 <div class='ui-standard-home-value-amount' onclick='alert("Tổng gía trị căn nhà")'>
                     2.5M</div>
             </div>
-            <div class='ui-standard-home-zoom' onclick='zoomOnClick(event);'>Phóng to</div>
-            <div class='ui-standard-home-buy' onclick='buyOnClick(event);'>Mua /<br>Nâng cấp</div>
+            <div class='ui-standard-home-zoom' onclick='zoomOnClick(event, "divHomeView");'>Phóng to</div>
+            <div class='ui-standard-home-buy' onclick='buyOnClick(event);'>Mua</div>
             <div class='ui-standard-home-visit' onclick='visitOnClick(event);'>Thăm</div>
             <div class='ui-standard-home-share' onclick='shareOnClick(event);'>Chia sẻ</div>
-            <div class='ui-standard-home-member' onclick='memberOnClick(event);'>Thành viên</div>
+            <div class='ui-standard-home-member' onclick='inviteOnClick(event);'>Mời</div>
+
+            <div class='ui-standard-buy-popup'>
+                <div class='ui-standard-buy-popup-item-list-outer'>
+                    <div class='ui-standard-buy-popup-item-list-grid'>
+                    </div>
+                </div>
+                <div class='ui-standard-buy-popup-preview'>
+                    <div class='ui-standard-buy-popup-preview-name'>Giường đôi Hoàng Gia</div>
+                    <div class='ui-standard-buy-popup-preview-cost'>700K</div>
+                    <div class='ui-standard-buy-popup-preview-share'>Chia sẻ</div>
+                    <div class='ui-standard-buy-popup-preview-close' onclick='closeBuyPopup()'>Đóng</div>
+                </div>
+                <div class='ui-standard-buy-popup-color-outer'>
+                    <div class='ui-standard-buy-popup-color-grid'>
+                        <div class='ui-standard-buy-popup-color-grid-item' style='background-color: gold;' onclick='onBuyColorSelect(event)'></div>
+                        <div class='ui-standard-buy-popup-color-grid-item' style='background-color: pink;' onclick='onBuyColorSelect(event)'></div>
+                    </div>
+                </div>
+                <div class='ui-standard-buy-popup-category-outer'>
+                    <div class='ui-standard-buy-popup-category-grid'>
+                        <div class='ui-standard-buy-popup-category-grid-item' onclick='onBuyCategorySelect(event)'>
+                            <div>Phân loại 1</div>
+                        </div>
+                        <div class='ui-standard-buy-popup-category-grid-item' onclick='onBuyCategorySelect(event)'>
+                            <div>Phân loại 2</div>
+                        </div>
+                        <div class='ui-standard-buy-popup-category-grid-item' onclick='onBuyCategorySelect(event)'>
+                            <div>Phân loại 3</div>
+                        </div>
+                        <div class='ui-standard-buy-popup-category-grid-item' onclick='onBuyCategorySelect(event)'>
+                            <div>Phân loại 4</div>
+                        </div>
+                        <div class='ui-standard-buy-popup-category-grid-item' onclick='onBuyCategorySelect(event)'>
+                            <div>Phân loại 5</div>
+                        </div>
+                        <div class='ui-standard-buy-popup-category-grid-item' onclick='onBuyCategorySelect(event)'>
+                            <div>Phân loại 6</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
 
+        <h1 style='margin-top: 30px; margin-left: auto; margin-right: auto; width: 100%; text-align: center;'>
+            MÀN HÌNH KHI ĐẶT NỘI THẤT<br>(KHÔNG TƯƠNG TÁC ĐƯỢC)
+        </h1>
+        <div style='display: grid; grid-template-rows: auto auto auto auto; align-content: center; grid-row-gap: 16px; overflow: hidden;
+            margin-left: auto; margin-right: auto; width: 320px; height: 600px; border: 1px solid black; position: 
+            relative; background-color: black; color: white;'>
+            <div id='divHomeView2' class='ui-standard-home-view'></div>
+            <div class='ui-standard-home-zoom' onclick='zoomOnClick(event, "divHomeView2");'>Phóng to</div>
+            <div class='ui-standard-home-buy'>Đặt</div>
+            <div class='ui-standard-home-place-cancel'>Hủy</div>
+        </div>
+
+        <h1 style='margin-top: 30px; margin-left: auto; margin-right: auto; width: 100%; text-align: center;'>
+            MÀN HÌNH CHỌN OPTION<br>(KHÔNG TƯƠNG TÁC ĐƯỢC)
+        </h1>
+        <div style='display: grid; grid-template-rows: auto auto auto auto; align-content: center; grid-row-gap: 16px; overflow: hidden;
+            margin-left: auto; margin-right: auto; width: 320px; height: 600px; border: 1px solid black; position: 
+            relative; background-color: black; color: white;'>
+            <div id='divHomeView4' class='ui-standard-home-view zoom-in'></div>
+            <div class='ui-standard-home-detail'>
+                <div id='divHomeName' class='ui-standard-home-detail-name'>Mái ấm gia đình hạnh phúc của bé Ngọc Hà
+                </div>
+                <div class='ui-standard-home-detail-address'>Số 249743, Hạnh Phúc</div>
+                <div class='ui-standard-home-detail-credit-grid'>
+                    <div class='ui-standard-home-detail-credit-grid-icon'></div>
+                    <div class='ui-standard-home-detail-credit-grid-value'>130K</div>
+                </div>
+            </div>
+            <div class='ui-standard-home-like-grid'>
+                <div class='ui-standard-home-like-icon'>Icon like
+                </div>
+                <div class='ui-standard-home-like-amount'>
+                    88888</div>
+            </div>
+            <div class='ui-standard-home-value-grid'>
+                <div class='ui-standard-home-value-icon'>Icon value
+                </div>
+                <div class='ui-standard-home-value-amount'>
+                    2.5M</div>
+            </div>
+            <div class='ui-standard-home-zoom'>Thu nhỏ</div>
+            <div class='ui-standard-home-buy' style='display: grid; justify-items: center; align-items: center; font-size: 16px;'>
+                <div style='line-height: normal;'>Mua</div>
+            </div>
+            <div class='ui-standard-home-visit'>Thăm</div>
+            <div class='ui-standard-home-share'>Chia sẻ</div>
+            <div class='ui-standard-home-member'>Mời</div>
+            <div class='ui-standard-home-option-popup'>
+                <div class='ui-standard-home-option-popup-item'>Đổi màu</div>
+                <div class='ui-standard-home-option-popup-item'>Nâng cấp</div>
+                <div class='ui-standard-home-option-popup-item' style='border: none;'>Cất vào kho</div>
+            </div>
+        </div>
+
+        <h1 style='margin-top: 30px; margin-left: auto; margin-right: auto; width: 100%; text-align: center;'>
+            MÀN HÌNH KHI ĐỔI MÀU<br>(KHÔNG TƯƠNG TÁC ĐƯỢC)
+        </h1>
+        <div style='display: grid; grid-template-rows: auto auto auto auto; align-content: center; grid-row-gap: 16px; overflow: hidden;
+            margin-left: auto; margin-right: auto; width: 320px; height: 600px; border: 1px solid black; position: 
+            relative; background-color: black; color: white;'>
+            <div id='divHomeView3' class='ui-standard-home-view zoom-in'></div>
+            <div class='ui-standard-home-detail'>
+                <div id='divHomeName' class='ui-standard-home-detail-name'>Mái ấm gia đình hạnh phúc của bé Ngọc Hà
+                </div>
+                <div class='ui-standard-home-detail-address'>Số 249743, Hạnh Phúc</div>
+                <div class='ui-standard-home-detail-credit-grid'>
+                    <div class='ui-standard-home-detail-credit-grid-icon'></div>
+                    <div class='ui-standard-home-detail-credit-grid-value'>130K</div>
+                </div>
+            </div>
+            <div class='ui-standard-home-like-grid'>
+                <div class='ui-standard-home-like-icon'>Icon like
+                </div>
+                <div class='ui-standard-home-like-amount'>
+                    88888</div>
+            </div>
+            <div class='ui-standard-home-value-grid'>
+                <div class='ui-standard-home-value-icon'>Icon value
+                </div>
+                <div class='ui-standard-home-value-amount'>
+                    2.5M</div>
+            </div>
+            <div class='ui-standard-home-zoom'>Thu nhỏ</div>
+            <div class='ui-standard-home-buy' style='display: grid; justify-items: center; align-items: center; font-size: 16px;'>
+                <div style='line-height: normal;'>Đổi màu</div>
+            </div>
+
+            <div class='ui-standard-buy-popup' style='display: grid; grid-template-rows: 320px; height: 320px;'>
+                <div class='ui-standard-buy-popup-item-list-outer' style='display: grid;'>
+                    <div class='ui-standard-buy-popup-item-list-grid'></div>
+                </div>
+                <div class='ui-standard-buy-popup-preview' style='display: grid;'>
+                    <div class='ui-standard-buy-popup-preview-name'>Giường đôi Hoàng Gia</div>
+                    <div class='ui-standard-buy-popup-preview-cost'>700K</div>
+                    <div class='ui-standard-buy-popup-preview-share'>Chia sẻ</div>
+                    <div class='ui-standard-buy-popup-preview-close'>Đóng</div>
+                </div>
+                <div class='ui-standard-buy-popup-color-outer'>
+                    <div class='ui-standard-buy-popup-color-grid' style='display: grid;'>
+                        <div class='ui-standard-buy-popup-color-grid-item' style='background-color: gold;'>
+                        </div>
+                        <div class='ui-standard-buy-popup-color-grid-item selected' style='background-color: pink;'>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <h1 style='margin-top: 30px; margin-left: auto; margin-right: auto; width: 100%; text-align: center;'>
+            MÀN HÌNH KHI NÂNG CẤP / LẤY KHỎI KHO<br>(KHÔNG TƯƠNG TÁC ĐƯỢC)
+        </h1>
+        <div style='display: grid; grid-template-rows: auto auto auto auto; align-content: center; grid-row-gap: 16px; overflow: hidden;
+            margin-left: auto; margin-right: auto; width: 320px; height: 600px; border: 1px solid black; position: 
+            relative; background-color: black; color: white;'>
+            <div id='divHomeView3' class='ui-standard-home-view zoom-in'></div>
+            <div class='ui-standard-home-detail'>
+                <div id='divHomeName' class='ui-standard-home-detail-name'>Mái ấm gia đình hạnh phúc của bé Ngọc Hà
+                </div>
+                <div class='ui-standard-home-detail-address'>Số 249743, Hạnh Phúc</div>
+                <div class='ui-standard-home-detail-credit-grid'>
+                    <div class='ui-standard-home-detail-credit-grid-icon'></div>
+                    <div class='ui-standard-home-detail-credit-grid-value'>130K</div>
+                </div>
+            </div>
+            <div class='ui-standard-home-like-grid'>
+                <div class='ui-standard-home-like-icon'>Icon like
+                </div>
+                <div class='ui-standard-home-like-amount'>
+                    88888</div>
+            </div>
+            <div class='ui-standard-home-value-grid'>
+                <div class='ui-standard-home-value-icon'>Icon value
+                </div>
+                <div class='ui-standard-home-value-amount'>
+                    2.5M</div>
+            </div>
+            <div class='ui-standard-home-zoom'>Thu nhỏ</div>
+            <div class='ui-standard-home-buy' style='display: grid; justify-items: center; align-items: center; font-size: 16px;'>
+                <div style='line-height: normal;'>Nâng cấp</div>
+            </div>
+
+            <div class='ui-standard-buy-popup' style='display: grid; grid-template-rows: 320px; height: 320px;'>
+                <div class='ui-standard-buy-popup-item-list-outer' style='display: grid;'>
+                    <div class='ui-standard-buy-popup-item-list-grid'></div>
+                </div>
+                <div class='ui-standard-buy-popup-preview' style='display: grid;'>
+                    <div class='ui-standard-buy-popup-preview-name'>Giường đôi Hoàng Gia</div>
+                    <div class='ui-standard-buy-popup-preview-cost'>700K</div>
+                    <div class='ui-standard-buy-popup-preview-share'>Chia sẻ</div>
+                    <div class='ui-standard-buy-popup-preview-close'>Đóng</div>
+                </div>
+                <div class='ui-standard-buy-popup-color-outer'>
+                    <div class='ui-standard-buy-popup-color-grid' style='display: grid;'>
+                        <div class='ui-standard-buy-popup-color-grid-item selected' style='background-color: gold;'>
+                        </div>
+                        <div class='ui-standard-buy-popup-color-grid-item' style='background-color: pink;'></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <h1 style='margin-top: 30px; margin-left: auto; margin-right: auto; width: 100%; text-align: center;'>
+            MÀN HÌNH THĂM NHÀ KHÁC<br>(KHÔNG TƯƠNG TÁC ĐƯỢC)
+        </h1>
+        <div style='display: grid; grid-template-rows: auto auto auto auto; align-content: center; grid-row-gap: 16px; overflow: hidden;
+            margin-left: auto; margin-right: auto; width: 320px; height: 600px; border: 1px solid black; position: 
+            relative; background-color: black; color: white;'>
+            <div id='divHomeView4' class='ui-standard-home-view zoom-in' style='background-image: url(late.jpg); left: 15%;'></div>
+            <div class='ui-standard-home-detail'>
+                <div id='divHomeName' class='ui-standard-home-detail-name'>Mái ấm hoàn hảo
+                </div>
+                <div class='ui-standard-home-detail-address'>Số 48567, Hoàn Mỹ</div>
+            </div>
+            <div class='ui-standard-home-like-grid'>
+                <div class='ui-standard-home-like-icon'>Icon like
+                </div>
+                <div class='ui-standard-home-like-amount'>
+                    40505</div>
+            </div>
+            <div class='ui-standard-home-value-grid'>
+                <div class='ui-standard-home-value-icon'>Icon value
+                </div>
+                <div class='ui-standard-home-value-amount'>
+                    134M</div>
+            </div>
+            <div class='ui-standard-home-zoom'>Thu nhỏ</div>
+            <div class='ui-standard-home-buy' style='display: grid; justify-items: center; align-items: center; font-size: 16px;'>
+                <div style='line-height: normal;'>Thả tim!</div>
+            </div>
+            <div class='ui-standard-home-share'>Chia sẻ</div>
+            <div class='ui-standard-home-visit'>Tiếp</div>
+            <div class='ui-standard-home-member'>Trước</div>
+        </div>
+
+        <h1 style='margin-top: 30px; margin-left: auto; margin-right: auto; width: 100%; text-align: center;'>
+            POPUP NHẬN QUÀ<br>XEM VÀ NHẬN CÁC PHẦN THƯỞNG ĐẠT ĐƯỢC
+        </h1>
+        <div class='popup-gift-box'>
+            <div class='popup-gift-box-top-outer'>
+                <div class='popup-gift-box-top-grid'>
+                    <div class='popup-gift-box-top-grid-item'>
+                        <div class='popup-gift-box-top-grid-item-date'>20-10-2021</div>
+                        <div class='popup-gift-box-top-grid-item-reward'>
+                            <div class='popup-gift-box-top-grid-item-reward-icon'></div>
+                            <div class='popup-gift-box-top-grid-item-reward-amount'>300K</div>
+                        </div>
+                        <div class='popup-gift-box-top-grid-item-title'>Quà Tân Gia Từ ACB<br>(Chưa đọc và chưa lấy)
+                        </div>
+                    </div>
+                    <div class='popup-gift-box-top-grid-item'>
+                        <div class='popup-gift-box-top-grid-item-date'>20-10-2021</div>
+                        <div class='popup-gift-box-top-grid-item-reward'>
+                            <div class='popup-gift-box-top-grid-item-reward-icon taken'></div>
+                            <div class='popup-gift-box-top-grid-item-reward-amount taken'>100K</div>
+                        </div>
+                        <div class='popup-gift-box-top-grid-item-title'>Hoàn thành tutorial (Chưa đọc và đã lấy)
+                        </div>
+                    </div>
+                    <div class='popup-gift-box-top-grid-item'>
+                        <div class='popup-gift-box-top-grid-item-date read'>20-10-2021</div>
+                        <div class='popup-gift-box-top-grid-item-reward'>
+                            <div class='popup-gift-box-top-grid-item-reward-icon'></div>
+                            <div class='popup-gift-box-top-grid-item-reward-amount'>100K</div>
+                        </div>
+                        <div class='popup-gift-box-top-grid-item-title read'>Mời người thân tham gia (Đã đọc và chưa lấy)
+                        </div>
+                    </div>
+                    <div class='popup-gift-box-top-grid-item'>
+                        <div class='popup-gift-box-top-grid-item-date read'>20-10-2021</div>
+                        <div class='popup-gift-box-top-grid-item-reward'>
+                            <div class='popup-gift-box-top-grid-item-reward-icon taken'></div>
+                            <div class='popup-gift-box-top-grid-item-reward-amount taken'>100K</div>
+                        </div>
+                        <div class='popup-gift-box-top-grid-item-title read'>Sử dụng SP tiết kiệm (Đã đọc và đã lấy)
+                        </div>
+                    </div>
+                    <div class='popup-gift-box-top-grid-item'>
+                        <div class='popup-gift-box-top-grid-item-date read'>20-10-2021</div>
+                        <div class='popup-gift-box-top-grid-item-reward'>
+                            <div class='popup-gift-box-top-grid-item-reward-icon taken'></div>
+                            <div class='popup-gift-box-top-grid-item-reward-amount taken'>100K</div>
+                        </div>
+                        <div class='popup-gift-box-top-grid-item-title read'>Giải 3 sự kiện Rằm Trung Thu 2021
+                        </div>
+                        <div class='popup-gift-box-top-grid-item-text'>Chức mừng bạn đã thắng giải trong cuộc thi Rằm Trung Thu 2021 trong trò chơi Mái Ấm do ACB tổ chức.
+                        </div>
+                        <div style='display: grid; grid-column: auto / span 2; grid-template-columns: auto auto; justify-content: space-around;'>
+                            <button>Xóa</button>
+                            <button>Ẩn</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <button>Đóng</button>
+        </div>
+
+        <h1 style='margin-top: 30px; margin-left: auto; margin-right: auto; width: 100%; text-align: center;'>
+            POPUP CỘNG ĐỒNG<br>XEM, UPLOAD NỘI DUNG DỰ THI SỰ KIỆN<br>(CHƯA CÓ)
+        </h1>
+
+        <h1 style='margin-top: 30px; margin-left: auto; margin-right: auto; width: 100%; text-align: center;'>
+            POPUP THÔNG TIN<br>XEM, THỰC HIỆN CÁC SURVEY ĐỂ NHẬN THÔNG TIN<br>(CHƯA CÓ)
+        </h1>
     </div>
 
     <div id='divOverlay' class='overlay'>
@@ -116,16 +427,21 @@
             <div class='ui-standard-home-share-popup-image'>
                 <div class='ui-standard-home-share-popup-name'>Mái ấm gia đình hạnh phúc của bé Ngọc Hà</div>
                 <div class='ui-standard-home-share-popup-address'>Số 249743, Hạnh Phúc</div>
-                <div class='ui-standard-home-share-popup-logo-acb'>Logo ACB</div>
+                <div class='ui-standard-home-share-popup-logo-acb'></div>
                 <div class='ui-standard-home-share-popup-ref'>MGT: JAKNDAK</div>
-                <div class='ui-standard-home-share-popup-desc'>Toàn cảnh căn nhà (1200 x 630)</div>
-                <div id='divSharePopupLike' class='ui-standard-home-share-popup-icon'></div>
-                <div id='divSharePopupLikeQuantity' class='ui-standard-home-share-popup-quantity'>88888</div>
+                <div class='ui-standard-home-share-detail-grid'>
+                    <div id='divSharePopupLike' class='ui-standard-home-share-popup-icon'></div>
+                    <div id='divSharePopupLikeQuantity' class='ui-standard-home-share-popup-quantity'>88888</div>
+                    <div id='divSharePopupValue' class='ui-standard-home-share-popup-icon-value'></div>
+                    <div id='divSharePopupValueQuantity' class='ui-standard-home-share-popup-valute-text'>2.4M</div>
+                </div>
             </div>
             <textarea class='ui-standard-home-share-popup-ta'>Tổ ấm của {tên TK chủ hộ} trên app ngân hàng ACB!</textarea>
             <div class='ui-standard-home-share-popup-show-like'>
-                <input id='inputSharePopupShowLike' type='checkbox' onchange='onSharePopupShowChange(event)' checked>
+                <input id='inputSharePopupShowLike' type='checkbox' onchange='onSharePopupShowLikeChange(event)' checked>
                 <label for='inputSharePopupShowLike'>Hiển thị số thả tim</label>
+                <input id='inputSharePopupShowValue' type='checkbox' onchange='onSharePopupShowValueChange(event)' checked>
+                <label for='inputSharePopupShowValue'>Hiển thị giá trị nhà</label>
             </div>
             <button class='ui-standard-home-share-popup-button'>FB</button>
             <button class='ui-standard-home-share-popup-button' style='justify-self: center;'>Zalo</button>
@@ -357,13 +673,25 @@
                     </div>
                 </div>
             </div>
-            <button class='ui-standard-home-visit-popup-button-close' onclick='hideDivVisitPopup()'>Đóng</button>
+            <button onclick='hideDivVisitPopup()'>Đóng</button>
+        </div>
+
+        <div id='divInvitePopup' class='ui-standard-home-invite-popup'>
+            <div>Mời gọi người thân, bạn bè tham giá gói Gia Đình Việt để được những ưu đãi tuyệt vời từ ACB. Bạn cũng sẽ được nhận phần quà giá trị khi người được mời đăng ký tham gia!</div>
+            <div>Họ tên người cần mời</div>
+            <input>
+            <div>Số điện thoại</div>
+            <input>
+            <div>Email</div>
+            <input>
+            <div>Lời nhắn</div>
+            <textarea style='resize: none; height: 80px; font-size: 14px;'>Hãy cùng mình tham gia Gia Đình Việt trên ACB và chơi game "Tổ ấm"!</textarea>
+            <button onclick='closeInvitePopup()'>Mời tham gia Gia Đình Việt</button>
         </div>
     </div>
 
 
 
-    </div>
     <!--
     <div style=' width: 100; height: 100%; overflow-y: auto; '>
                     <h1

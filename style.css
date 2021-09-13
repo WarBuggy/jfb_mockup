@@ -192,9 +192,9 @@ div.ui-standard-home-buy {
     width: 64px;
     height: 64px;
     background-color: salmon;
-    font-size: 16px;
+    font-size: 20px;
     font-weight: 700;
-    line-height: 21px;
+    line-height: 64px;
     text-align: center;
     bottom: 16px;
     left: 50%;
@@ -211,7 +211,7 @@ div.ui-standard-home-visit {
     font-size: 12px;
     font-weight: 700;
     text-align: center;
-    bottom: 16px;
+    bottom: 80px;
     right: 16px;
     cursor: pointer;
 }
@@ -264,7 +264,7 @@ div.ui-standard-home-share {
     font-size: 12px;
     font-weight: 700;
     text-align: center;
-    bottom: 80px;
+    bottom: 16px;
     right: 16px;
     cursor: pointer;
     color: white;
@@ -288,7 +288,12 @@ div.ui-standard-home-share-popup-image {
     width: 100%;
     position: relative;
     height: 180px;
-    background-color: darkgoldenrod;
+    background-image: url(early.jpg);
+    background-repeat: no-repeat;
+    background-size: 95%;
+    background-position: center;
+    color: white;
+    background-color: black;
 }
 
 div.ui-standard-home-share-popup-name {
@@ -311,7 +316,12 @@ div.ui-standard-home-share-popup-logo-acb {
     position: absolute;
     right: 8px;
     bottom: 8px;
-    font-size: 16px;
+    width: 48px;
+    height: calc(48px * 238 / 600);
+    background-image: url(logo_acb.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
 }
 
 div.ui-standard-home-share-popup-ref {
@@ -332,21 +342,35 @@ div.ui-standard-home-share-popup-desc {
     width: 100%;
 }
 
-div.ui-standard-home-share-popup-icon {
+div.ui-standard-home-share-detail-grid {
+    display: grid;
+    grid-template-columns: auto;
     position: absolute;
-    right: 8px;
     top: 8px;
+    right: 8px;
+    justify-items: end;
+}
+
+div.ui-standard-home-share-popup-icon {
     width: 16px;
     height: 16px;
     background-color: red;
 }
 
 div.ui-standard-home-share-popup-quantity {
-    position: absolute;
-    right: 8px;
-    top: 28px;
     font-size: 12px;
     font-weight: bold;
+}
+
+div.ui-standard-home-share-popup-icon-value {
+    width: 16px;
+    height: 16px;
+    background-color: goldenrod;
+}
+
+div.ui-standard-home-share-popup-valute-text {
+    font-weight: bold;
+    font-size: 12px;
 }
 
 textarea.ui-standard-home-share-popup-ta {
@@ -370,6 +394,9 @@ button.ui-standard-home-share-popup-button-close {
 
 div.ui-standard-home-share-popup-show-like {
     grid-column: auto / span 3;
+    display: grid;
+    grid-template-columns: auto 1fr;
+    grid-column-gap: 8px;
 }
 
 div.ui-standard-home-visit-popup {
@@ -486,4 +513,352 @@ div.ui-standard-home-visit-popup-category-search-result-item-like-text {
     cursor: pointer;
 }
 
-button.ui-standard-home-visit-popup-button-close {}
+div.ui-standard-home-view {
+    background-image: url(early.jpg);
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
+    position: absolute;
+    width: 800px;
+    height: calc(800px * 1179 / 1500);
+    left: 50%;
+    top: 40%;
+    transform: translate(-50%, -50%);
+}
+
+.ui-standard-home-view.zoom-in {
+    width: 1300px;
+    height: calc(1300px * 1179 / 1500);
+    left: 50%;
+    top: 40%;
+    transform: translate(-50%, -50%);
+}
+
+div.ui-standard-home-detail-credit-grid {
+    display: grid;
+    grid-template-columns: 16px 40px auto;
+    margin-top: 8px;
+    grid-column-gap: 8px;
+}
+
+div.ui-standard-home-detail-credit-grid-icon {
+    width: 16px;
+    height: 16px;
+    background-color: greenyellow;
+}
+
+div.ui-standard-home-detail-credit-grid-value {
+    color: greenyellow;
+    font-weight: bold;
+    font-size: 14px;
+    align-self: baseline;
+}
+
+div.ui-standard-home-detail-credit-grid-value-hint {
+    color: white;
+    font-size: 10px;
+    align-self: baseline;
+}
+
+div.ui-standard-home-invite-popup {
+    display: none;
+    justify-self: center;
+    align-self: center;
+    width: 300px;
+    background-color: white;
+    border: 1px solid black;
+    padding: 16px;
+    border-radius: 8px;
+    grid-template-columns: auto;
+    grid-row-gap: 8px;
+}
+
+div.ui-standard-buy-popup {
+    position: absolute;
+    bottom: 90px;
+    left: 50%;
+    width: 295px;
+    height: 400px;
+    box-sizing: border-box;
+    transform: translateX(-50%);
+    background-color: rgba(0, 0, 0, 0.3);
+    display: none;
+    grid-template-columns: 64px 1fr 40px;
+    grid-template-rows: 320px 80px;
+}
+
+div.ui-standard-buy-popup-category-outer {
+    grid-column: auto / span 3;
+    display: block;
+    overflow-x: auto;
+    box-sizing: border-box;
+}
+
+div.ui-standard-buy-popup-category-grid {
+    display: grid;
+    grid-column-gap: 8px;
+    grid-auto-columns: auto;
+    box-sizing: border-box;
+}
+
+div.ui-standard-buy-popup-category-grid-item {
+    border-radius: 8px;
+    width: 64px;
+    height: 64px;
+    justify-self: center;
+    align-self: center;
+    background-color: seashell;
+    grid-row: 1;
+    color: black;
+    text-align: center;
+    display: grid;
+    box-sizing: border-box;
+    cursor: pointer;
+    border: 5px solid;
+    border-color: transparent;
+}
+
+div.ui-standard-buy-popup-category-grid-item>div {
+    justify-self: center;
+    align-self: center;
+    box-sizing: border-box;
+    pointer-events: none;
+}
+
+.ui-standard-buy-popup-category-grid-item.selected {
+    border-color: palevioletred;
+}
+
+div.ui-standard-buy-popup-item-list-outer {
+    display: none;
+    overflow-y: auto;
+    box-sizing: border-box;
+    padding-bottom: 8px;
+    padding-top: 16px;
+}
+
+div.ui-standard-buy-popup-item-list-grid {
+    display: grid;
+    grid-template-columns: auto;
+    box-sizing: border-box;
+    grid-row-gap: 8px;
+}
+
+div.ui-standard-buy-popup-item-list-grid-item {
+    border-radius: 8px;
+    width: 50px;
+    height: 50px;
+    justify-self: center;
+    align-self: center;
+    box-sizing: border-box;
+    cursor: pointer;
+    background-image: url(giuong.png);
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+    border-radius: 2px solid;
+    border-color: transparent;
+}
+
+.ui-standard-buy-popup-item-list-grid-item.selected {
+    background-color: rgba(255, 255, 255, 0.7);
+}
+
+div.ui-standard-buy-popup-preview {
+    background-image: url(giuong.png);
+    background-size: 95%;
+    background-repeat: no-repeat;
+    background-position: center;
+    display: none;
+    grid-template-rows: auto 1fr auto;
+    grid-template-columns: auto auto;
+}
+
+div.ui-standard-buy-popup-preview-name {
+    font-size: 14px;
+    justify-self: center;
+    color: white;
+    padding-top: 16px;
+    font-weight: bold;
+    grid-column: auto / span 2;
+}
+
+div.ui-standard-buy-popup-preview-cost {
+    font-size: 16px;
+    justify-self: center;
+    align-self: end;
+    color: greenyellow;
+    padding-bottom: 16px;
+    font-weight: bold;
+    grid-column: auto / span 2;
+}
+
+div.ui-standard-buy-popup-preview-share {
+    font-size: 12px;
+    justify-self: end;
+    color: white;
+    font-weight: bold;
+    text-decoration: underline;
+    padding-bottom: 16px;
+    padding-right: 8px;
+    cursor: pointer;
+}
+
+div.ui-standard-buy-popup-preview-close {
+    font-size: 12px;
+    justify-self: start;
+    color: white;
+    font-weight: bold;
+    text-decoration: underline;
+    padding-bottom: 16px;
+    padding-left: 8px;
+    cursor: pointer;
+}
+
+div.ui-standard-buy-popup-color-outer {
+    display: block;
+    overflow-y: auto;
+    box-sizing: border-box;
+    padding-bottom: 8px;
+    padding-top: 16px;
+}
+
+div.ui-standard-buy-popup-color-grid {
+    display: none;
+    grid-template-columns: auto;
+    box-sizing: border-box;
+    grid-row-gap: 16px;
+}
+
+div.ui-standard-buy-popup-color-grid-item {
+    border-radius: 4px;
+    width: 20px;
+    height: 20px;
+    justify-self: center;
+    align-self: center;
+    box-sizing: border-box;
+    cursor: pointer;
+    border: 2px solid;
+    border-color: transparent;
+}
+
+.ui-standard-buy-popup-color-grid-item.selected {
+    border-color: white;
+}
+
+div.ui-standard-home-place-cancel {
+    position: absolute;
+    width: 320px;
+    text-align: center;
+    text-decoration: underline;
+    color: white;
+    font-size: 18px;
+    bottom: 120px;
+    cursor: pointer;
+}
+
+div.ui-standard-home-option-popup {
+    position: absolute;
+    top: 305px;
+    left: 110px;
+    background-color: white;
+    display: grid;
+    color: black;
+    border-radius: 8px;
+}
+
+div.ui-standard-home-option-popup-item {
+    font-size: 16px;
+    border-bottom: 1px solid gray;
+    padding: 8px;
+    padding-left: 16px;
+}
+
+div.popup-gift-box {
+    width: 300px;
+    margin-left: auto;
+    margin-right: auto;
+    border: 1px solid black;
+    border-radius: 8px;
+    height: 600px;
+    display: grid;
+    grid-row-gap: 8px;
+    grid-template-rows: 1fr auto;
+    padding: 16px;
+    box-sizing: border-box;
+}
+
+div.popup-gift-box-top-outer {
+    display: block;
+    overflow-y: auto;
+    box-sizing: border-box;
+}
+
+div.popup-gift-box-top-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-row-gap: 16px;
+}
+
+div.popup-gift-box-top-grid-item {
+    display: grid;
+    grid-template-columns: 1fr auto;
+    border: 1px solid black;
+    border-radius: 8px;
+    padding: 8px;
+    grid-row-gap: 8px;
+    grid-column-gap: 16px;
+    font-size: 14px;
+}
+
+div.popup-gift-box-top-grid-item-date {
+    font-weight: bold;
+}
+
+div.popup-gift-box-top-grid-item-title {
+    font-weight: bold;
+    height: 36px;
+}
+
+div.popup-gift-box-top-grid-item-reward {
+    grid-row: auto/ span 2;
+    display: grid;
+    grid-template-columns: auto;
+    grid-template-rows: auto auto;
+}
+
+div.popup-gift-box-top-grid-item-reward-icon {
+    justify-self: center;
+    align-self: center;
+    width: 32px;
+    height: 32px;
+    background-color: greenyellow;
+    border-radius: 4px;
+}
+
+div.popup-gift-box-top-grid-item-reward-amount {
+    justify-self: center;
+    align-self: center;
+    font-weight: bold;
+    color: greenyellow;
+}
+
+.popup-gift-box-top-grid-item-reward-icon.taken {
+    background-color: darkolivegreen;
+}
+
+.popup-gift-box-top-grid-item-reward-amount.taken {
+    color: darkolivegreen;
+}
+
+.popup-gift-box-top-grid-item-title.read {
+    font-weight: 400;
+}
+
+.popup-gift-box-top-grid-item-date.read {
+    font-weight: 400;
+}
+
+div.popup-gift-box-top-grid-item-text {
+    grid-column: auto / span 2;
+}
