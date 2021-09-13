@@ -288,7 +288,7 @@ div.ui-standard-home-share-popup-image {
     width: 100%;
     position: relative;
     height: 180px;
-    background-image: url(early.jpg);
+    background-image: url(early.png);
     background-repeat: no-repeat;
     background-size: 95%;
     background-position: center;
@@ -514,7 +514,7 @@ div.ui-standard-home-visit-popup-category-search-result-item-like-text {
 }
 
 div.ui-standard-home-view {
-    background-image: url(early.jpg);
+    background-image: url(early.png);
     background-repeat: no-repeat;
     background-size: contain;
     background-position: center;
@@ -759,8 +759,8 @@ div.ui-standard-home-place-cancel {
 
 div.ui-standard-home-option-popup {
     position: absolute;
-    top: 305px;
-    left: 110px;
+    top: 345px;
+    left: 150px;
     background-color: white;
     display: grid;
     color: black;
