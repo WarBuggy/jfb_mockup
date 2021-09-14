@@ -34,7 +34,7 @@
             BƯỚC 1: CHỌN KHU PHỐ
         </h1>
         <div style='display: grid; grid-template-rows: auto auto auto auto; align-content: center; grid-row-gap: 16px;
-            margin-left: auto; margin-right: auto; width: 320px; height: 650px; border: 1px solid black;'>
+            margin-left: auto; margin-right: auto; width: 320px; height: 650px; border: 1px solid black; background-color: white;'>
             <h4 style='margin-left: auto; margin-right: auto; margin-top: 0px; width: 100%; text-align: center;'>
                 Chỉ còn vài bước nữa là bạn đã có thể làm chủ sở hữu một căn nhà ở thành phố Á Châu.
                 <br>Xin bạn vui lòng chọn khu phố mà bạn muốn cư ngụ!
@@ -62,7 +62,7 @@
             <br>Khi đã zoom xong, hiện lên popup.
         </h5>
         <div style='display: grid; grid-template-rows: auto auto auto auto; align-content: center; grid-row-gap: 16px;
-            margin-left: auto; margin-right: auto; width: 320px; height: 650px; border: 1px solid black;'>
+            margin-left: auto; margin-right: auto; width: 320px; height: 650px; border: 1px solid black; background-color: white;'>
             <h4 style='margin-left: auto; margin-right: auto; margin-top: 0px; width: 100%; text-align: center;'>
                 Xin chúc mừng! Quyền sở hửu căn nhà số 249743, phố Hạnh Phúc đã thuộc về bạn.
                 <br><br> Hãy đặt tên cho tổ ấm mới!
@@ -82,23 +82,20 @@
             relative; background-color: white; color: #3b009a;'>
             <div id='divHomeView' class='ui-standard-home-view'></div>
             <div class='ui-standard-home-detail'>
-                <div id='divHomeName' class='ui-standard-home-detail-name' onclick='showHomeNameEdit(event)'>Mái ấm gia đình hạnh phúc của bé Ngọc Hà (edit)</div>
+                <div id='divHomeName' class='ui-standard-home-detail-name' onclick='showHomeNameEdit(event)'>Mái ấm gia đình hạnh phúc của bé Ngọc Hà</div>
                 <div class='ui-standard-home-detail-address'>Số 249743, Hạnh Phúc</div>
                 <div class='ui-standard-home-detail-credit-grid'>
                     <div class='ui-standard-home-detail-credit-grid-icon'></div>
                     <div class='ui-standard-home-detail-credit-grid-value'>130K</div>
-                    <div class='ui-standard-home-detail-credit-grid-value-hint'>(số tiền ảo đang có)</div>
                 </div>
             </div>
             <div class='ui-standard-home-like-grid'>
-                <div class='ui-standard-home-like-icon' onclick='alert("Icon hình trái tim")'>Icon like
-                </div>
+                <div class='ui-standard-home-like-icon'></div>
                 <div class='ui-standard-home-like-amount' onclick='alert("Số lượng like đã nhận được của căn nhà này")'>
                     88888</div>
             </div>
             <div class='ui-standard-home-value-grid'>
-                <div class='ui-standard-home-value-icon' onclick='alert("Icon hình coin / tiền")'>Icon value
-                </div>
+                <div class='ui-standard-home-value-icon'></div>
                 <div class='ui-standard-home-value-amount' onclick='alert("Tổng gía trị căn nhà")'>
                     2.5M</div>
             </div>
@@ -176,10 +173,13 @@
                 <div class='ui-standard-button-grid-icon' style='background-image: url(zoom_in.png);'></div>
                 <div class='ui-standard-button-grid-text'>Thu nhỏ</div>
             </div>
-            <div class='ui-standard-home-buy'>Đặt</div>
+            <div class='ui-standard-button-grid center'>
+                <div id='divBuyIcon' class='ui-standard-button-grid-icon center' style='background-image: url(down.svg);'></div>
+                <div id='divBuyText' class='ui-standard-button-grid-text center'>Đặt</div>
+            </div>
             <div class='ui-standard-home-place-cancel'>Hủy</div>
             <div class='ui-standard-button-grid' style='bottom: 16px; right: 16px;'>
-                <div class='ui-standard-button-grid-icon' style='background-image: url(refresh.svg);'></div>
+                <div class='ui-standard-button-grid-icon' style='background-image: url(refresh.svg); background-size: 85%;'></div>
                 <div class='ui-standard-button-grid-text'>Xoay</div>
             </div>
         </div>
@@ -190,7 +190,7 @@
         <div style='display: grid; grid-template-rows: auto auto auto auto; align-content: center; grid-row-gap: 16px; overflow: hidden;
             margin-left: auto; margin-right: auto; width: 320px; height: 600px; border: 1px solid black; position: 
             relative; background-color: white; color: #3b009a;'>
-            <div id='divHomeView4' class='ui-standard-home-view zoom-in' style='background-image: url(option.png);'>
+            <div id='divHomeView4' class='ui-standard-home-view zoom-in' style='background-image: url(option.png); top: 30%;'>
             </div>
             <div class='ui-standard-home-detail'>
                 <div id='divHomeName' class='ui-standard-home-detail-name'>Mái ấm gia đình hạnh phúc của bé Ngọc Hà
@@ -202,16 +202,12 @@
                 </div>
             </div>
             <div class='ui-standard-home-like-grid'>
-                <div class='ui-standard-home-like-icon'>Icon like
-                </div>
-                <div class='ui-standard-home-like-amount'>
-                    88888</div>
+                <div class='ui-standard-home-like-icon'></div>
+                <div class='ui-standard-home-like-amount'>88888</div>
             </div>
             <div class='ui-standard-home-value-grid'>
-                <div class='ui-standard-home-value-icon'>Icon value
-                </div>
-                <div class='ui-standard-home-value-amount'>
-                    2.5M</div>
+                <div class='ui-standard-home-value-icon'></div>
+                <div class='ui-standard-home-value-amount'>2.5M</div>
             </div>
             <div class='ui-standard-button-grid' style='bottom: 16px; left: 16px; width: 55px;'>
                 <div class='ui-standard-button-grid-icon' style='background-image: url(zoom_in.png);'></div>
@@ -257,23 +253,21 @@
                 </div>
             </div>
             <div class='ui-standard-home-like-grid'>
-                <div class='ui-standard-home-like-icon'>Icon like
-                </div>
-                <div class='ui-standard-home-like-amount'>
-                    88888</div>
+                <div class='ui-standard-home-like-icon'></div>
+                <div class='ui-standard-home-like-amount'>88888</div>
             </div>
             <div class='ui-standard-home-value-grid'>
-                <div class='ui-standard-home-value-icon'>Icon value
-                </div>
-                <div class='ui-standard-home-value-amount'>
-                    2.5M</div>
+                <div class='ui-standard-home-value-icon'></div>
+                <div class='ui-standard-home-value-amount'>2.5M</div>
             </div>
             <div class='ui-standard-button-grid' style='bottom: 16px; left: 16px; width: 55px;'>
                 <div class='ui-standard-button-grid-icon' style='background-image: url(zoom_in.png);'></div>
                 <div class='ui-standard-button-grid-text'>Phóng to</div>
             </div>
-            <div class='ui-standard-home-buy' style='display: grid; justify-items: center; align-items: center; font-size: 16px;'>
-                <div style='line-height: normal;'>Đổi màu</div>
+            <div class='ui-standard-button-grid center'>
+                <div id='divBuyIcon' class='ui-standard-button-grid-icon center' style='background-image: url(paint.svg);'>
+                </div>
+                <div id='divBuyText' class='ui-standard-button-grid-text center'>Đổi màu</div>
             </div>
 
             <div class='ui-standard-buy-popup' style='display: grid; grid-template-rows: 320px; height: 320px;'>
@@ -314,23 +308,21 @@
                 </div>
             </div>
             <div class='ui-standard-home-like-grid'>
-                <div class='ui-standard-home-like-icon'>Icon like
-                </div>
-                <div class='ui-standard-home-like-amount'>
-                    88888</div>
+                <div class='ui-standard-home-like-icon'></div>
+                <div class='ui-standard-home-like-amount'>88888</div>
             </div>
             <div class='ui-standard-home-value-grid'>
-                <div class='ui-standard-home-value-icon'>Icon value
-                </div>
-                <div class='ui-standard-home-value-amount'>
-                    2.5M</div>
+                <div class='ui-standard-home-value-icon'></div>
+                <div class='ui-standard-home-value-amount'>2.5M</div>
             </div>
             <div class='ui-standard-button-grid' style='bottom: 16px; left: 16px; width: 55px;'>
                 <div class='ui-standard-button-grid-icon' style='background-image: url(zoom_in.png);'></div>
                 <div class='ui-standard-button-grid-text'>Phóng to</div>
             </div>
-            <div class='ui-standard-home-buy' style='display: grid; justify-items: center; align-items: center; font-size: 16px;'>
-                <div style='line-height: normal;'>Nâng cấp</div>
+            <div class='ui-standard-button-grid center'>
+                <div id='divBuyIcon' class='ui-standard-button-grid-icon center' style='background-image: url(up.svg);'>
+                </div>
+                <div id='divBuyText' class='ui-standard-button-grid-text center'>Nâng cấp</div>
             </div>
 
             <div class='ui-standard-buy-popup' style='display: grid; grid-template-rows: 320px; height: 320px;'>
@@ -366,27 +358,33 @@
                 <div class='ui-standard-home-detail-address'>Số 48567, Hoàn Mỹ</div>
             </div>
             <div class='ui-standard-home-like-grid'>
-                <div class='ui-standard-home-like-icon'>Icon like
-                </div>
-                <div class='ui-standard-home-like-amount'>
-                    40505</div>
+                <div class='ui-standard-home-like-icon'></div>
+                <div class='ui-standard-home-like-amount'>40505</div>
             </div>
             <div class='ui-standard-home-value-grid'>
-                <div class='ui-standard-home-value-icon'>Icon value
-                </div>
-                <div class='ui-standard-home-value-amount'>
-                    134M</div>
+                <div class='ui-standard-home-value-icon'></div>
+                <div class='ui-standard-home-value-amount'>134M</div>
             </div>
             <div class='ui-standard-button-grid' style='bottom: 16px; left: 16px; width: 55px;'>
                 <div class='ui-standard-button-grid-icon' style='background-image: url(zoom_in.png);'></div>
                 <div class='ui-standard-button-grid-text'>Phóng to</div>
             </div>
-            <div class='ui-standard-home-buy' style='display: grid; justify-items: center; align-items: center; font-size: 16px;'>
-                <div style='line-height: normal;'>Thả tim!</div>
+            <div class='ui-standard-button-grid center'>
+                <div id='divBuyIcon' class='ui-standard-button-grid-icon center' style='background-image: url(empty_like.svg);'></div>
+                <div id='divBuyText' class='ui-standard-button-grid-text center'>Thả tim</div>
             </div>
-            <div class='ui-standard-home-share'>Chia sẻ</div>
-            <div class='ui-standard-home-visit'>Tiếp</div>
-            <div class='ui-standard-home-member'>Trước</div>
+            <div class='ui-standard-button-grid' style='bottom: 86px; right: 16px;'>
+                <div class='ui-standard-button-grid-icon' style='background-image: url(visit.svg);'></div>
+                <div class='ui-standard-button-grid-text'>Thăm</div>
+            </div>
+            <div class='ui-standard-button-grid' style='bottom: 16px; right: 16px;'>
+                <div class='ui-standard-button-grid-icon' style='background-image: url(share.svg); background-size: 80%;'></div>
+                <div class='ui-standard-button-grid-text'>Chia sẻ</div>
+            </div>
+            <div class='ui-standard-button-grid' style='bottom: 86px; left: 16px;'>
+                <div class='ui-standard-button-grid-icon' style='background-image: url(invite.svg);'></div>
+                <div class='ui-standard-button-grid-text'>Mời</div>
+            </div>
         </div>
 
         <h1 style='margin-top: 30px; margin-left: auto; margin-right: auto; width: 100%; text-align: center;'>

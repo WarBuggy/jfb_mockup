@@ -27,6 +27,7 @@ body {
     -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
     background-color: white;
     font-family: "Quicksand", sans-serif;
+    background-color: lightgray;
 }
 
 p {
@@ -113,12 +114,11 @@ div.ui-standard-home-like-grid {
 div.ui-standard-home-like-icon {
     width: 32px;
     height: 32px;
-    line-height: 16px;
-    background-color: red;
     justify-self: end;
-    cursor: pointer;
-    font-size: 10px;
-    text-align: center;
+    background-image: url(favourite.svg);
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
 }
 
 div.ui-standard-home-like-amount {
@@ -141,12 +141,11 @@ div.ui-standard-home-value-grid {
 div.ui-standard-home-value-icon {
     width: 32px;
     height: 32px;
-    line-height: 16px;
-    background-color: goldenrod;
     justify-self: end;
-    cursor: pointer;
-    font-size: 10px;
-    text-align: center;
+    background-image: url(wealth.svg);
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
 }
 
 div.ui-standard-home-value-amount {
@@ -547,11 +546,14 @@ div.ui-standard-home-detail-credit-grid {
 div.ui-standard-home-detail-credit-grid-icon {
     width: 16px;
     height: 16px;
-    background-color: greenyellow;
+    background-image: url(money.svg);
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
 }
 
 div.ui-standard-home-detail-credit-grid-value {
-    color: greenyellow;
+    color: #002395;
     font-weight: bold;
     font-size: 14px;
     align-self: baseline;
@@ -762,7 +764,7 @@ div.ui-standard-home-place-cancel {
 
 div.ui-standard-home-option-popup {
     position: absolute;
-    top: 345px;
+    top: 285px;
     left: 150px;
     background-color: white;
     display: grid;
@@ -789,6 +791,7 @@ div.popup-gift-box {
     grid-template-rows: 1fr auto;
     padding: 16px;
     box-sizing: border-box;
+    background-color: white;
 }
 
 div.popup-gift-box-top-outer {
