@@ -31,13 +31,16 @@ window.onload = function() {
 };
 
 function zoomOnClick(event, divId) {
-    let element = event.target;
+    let icon = event.target.children[0];
+    let text = event.target.children[1];
     let divView = document.getElementById(divId);
-    if (element.innerText == 'Phóng to') {
-        element.innerText = 'Thu nhỏ';
+    if (text.innerText == 'Phóng to') {
+        text.innerText = 'Thu nhỏ';
+        icon.style.backgroundImage = 'url(zoom_out.png)';
         divView.classList.add('zoom-in');
     } else {
-        element.innerText = 'Phóng to';
+        text.innerText = 'Phóng to';
+        icon.style.backgroundImage = 'url(zoom_in.png)';
         divView.classList.remove('zoom-in');
     }
 };
@@ -161,21 +164,23 @@ function closeInvitePopup() {
 };
 
 function buyOnClick(event) {
-    let buttonBuy = document.getElementsByClassName('ui-standard-home-buy')[0];
-    let textBuy = buttonBuy.innerText;
-    if (textBuy == 'Mua') {
-        document.getElementsByClassName('ui-standard-home-share')[0].style.display = 'none';
-        document.getElementsByClassName('ui-standard-home-member')[0].style.display = 'none';
+    let icon = event.target.children[0];
+    let text = event.target.children[1];
+    let textBuy = text.innerText;
+    if (textBuy == 'Shop') {
+        toggleMainUIButton(false);
         document.getElementsByClassName('ui-standard-buy-popup')[0].style.display = 'grid';
         document.getElementsByClassName('ui-standard-home-visit')[0].style.display = 'none';
-        buttonBuy.innerText = 'Hủy';
+        text.innerText = 'Hủy';
+        document.getElementById('divBuyIcon').style.backgroundImage = 'url(close.svg)';
     } else if (textBuy == 'Hủy') {
         closeBuyPopup();
     }
 };
 
 function onBuyCategorySelect(event) {
-    document.getElementsByClassName('ui-standard-home-buy')[0].innerText = 'Hủy';
+    document.getElementById('divBuyText').innerText = 'Hủy';
+    document.getElementById('divBuyIcon').style.backgroundImage = 'url(close.svg)';
     clearAllBuyCategorySelect();
     event.target.classList.add('selected');
     document.getElementsByClassName('ui-standard-buy-popup-item-list-outer')[0].style.display = 'block';
@@ -192,7 +197,8 @@ function onBuyItemSlect(event) {
     document.getElementsByClassName('ui-standard-buy-popup-color-grid')[0].style.display = 'grid';
     clearAllBuyColorSelect();
     document.getElementsByClassName('ui-standard-buy-popup-color-grid-item')[0].classList.add('selected');
-    document.getElementsByClassName('ui-standard-home-buy')[0].innerText = 'Mua!'
+    document.getElementById('divBuyText').innerText = 'Mua'
+    document.getElementById('divBuyIcon').style.backgroundImage = 'url(pay.png)';
 };
 
 function onBuyColorSelect(event) {
@@ -231,9 +237,9 @@ function clearAllBuyColorSelect() {
 };
 
 function closeBuyPopup() {
-    document.getElementsByClassName('ui-standard-home-buy')[0].innerText = 'Mua';
-    document.getElementsByClassName('ui-standard-home-share')[0].style.display = 'block';
-    document.getElementsByClassName('ui-standard-home-member')[0].style.display = 'grid';
+    document.getElementById('divBuyText').innerText = 'Shop';
+    document.getElementById('divBuyIcon').style.backgroundImage = 'url(cart.svg)';
+    toggleMainUIButton(true);
     document.getElementsByClassName('ui-standard-home-visit')[0].style.display = 'block';
     document.getElementsByClassName('ui-standard-buy-popup')[0].style.display = 'none';
     clearAllBuyCategorySelect();
@@ -243,3 +249,18 @@ function closeBuyPopup() {
     clearAllBuyColorSelect();
     document.getElementsByClassName('ui-standard-buy-popup-color-grid')[0].style.display = 'none';
 };
+
+function toggleMainUIButton(showing) {
+    let display = 'none';
+    if (showing === true) {
+        display = 'grid';
+    }
+    let gridList = document.getElementsByClassName('ui-standard-button-grid');
+    for (let i = 0; i < gridList.length; i++) {
+        let grid = gridList[i];
+        if (grid.classList.contains('center')) {
+            continue;
+        }
+        grid.style.display = display;
+    }
+}

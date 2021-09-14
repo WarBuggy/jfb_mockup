@@ -102,12 +102,26 @@
                 <div class='ui-standard-home-value-amount' onclick='alert("Tổng gía trị căn nhà")'>
                     2.5M</div>
             </div>
-            <div class='ui-standard-home-zoom' onclick='zoomOnClick(event, "divHomeView");'>Phóng to</div>
-            <div class='ui-standard-home-buy' onclick='buyOnClick(event);'>Mua</div>
-            <div class='ui-standard-home-visit' onclick='visitOnClick(event);'>Thăm</div>
-            <div class='ui-standard-home-share' onclick='shareOnClick(event);'>Chia sẻ</div>
-            <div class='ui-standard-home-member' onclick='inviteOnClick(event);'>Mời</div>
-
+            <div class='ui-standard-button-grid' style='bottom: 16px; left: 16px; width: 55px;' onclick='zoomOnClick(event, "divHomeView");'>
+                <div class='ui-standard-button-grid-icon' style='background-image: url(zoom_in.png);'></div>
+                <div class='ui-standard-button-grid-text'>Phóng to</div>
+            </div>
+            <div class='ui-standard-button-grid center' onclick='buyOnClick(event);'>
+                <div id='divBuyIcon' class='ui-standard-button-grid-icon center' style='background-image: url(cart.svg);'></div>
+                <div id='divBuyText' class='ui-standard-button-grid-text center'>Shop</div>
+            </div>
+            <div class='ui-standard-button-grid' style='bottom: 86px; right: 16px;' onclick='visitOnClick(event);'>
+                <div class='ui-standard-button-grid-icon' style='background-image: url(visit.svg);'></div>
+                <div class='ui-standard-button-grid-text'>Thăm</div>
+            </div>
+            <div class='ui-standard-button-grid' style='bottom: 16px; right: 16px;' onclick='shareOnClick(event);'>
+                <div class='ui-standard-button-grid-icon' style='background-image: url(share.svg); background-size: 80%;'></div>
+                <div class='ui-standard-button-grid-text'>Chia sẻ</div>
+            </div>
+            <div class='ui-standard-button-grid' style='bottom: 86px; left: 16px;' onclick='inviteOnClick(event);'>
+                <div class='ui-standard-button-grid-icon' style='background-image: url(invite.svg);'></div>
+                <div class='ui-standard-button-grid-text'>Mời</div>
+            </div>
             <div class='ui-standard-buy-popup'>
                 <div class='ui-standard-buy-popup-item-list-outer'>
                     <div class='ui-standard-buy-popup-item-list-grid'>
@@ -158,9 +172,16 @@
             relative; background-color: white; color: #3b009a;'>
             <div id='divHomeView2' class='ui-standard-home-view zoom-in' style='background-image: url(placing.png); left: 0%; transform: translate(-25%, -50%);'>
             </div>
-            <div class='ui-standard-home-zoom' onclick='zoomOnClick(event, "divHomeView2");'>Phóng to</div>
+            <div class='ui-standard-button-grid' style='bottom: 16px; left: 16px; width: 55px;' onclick='zoomOnClick(event, "divHomeView2");'>
+                <div class='ui-standard-button-grid-icon' style='background-image: url(zoom_in.png);'></div>
+                <div class='ui-standard-button-grid-text'>Thu nhỏ</div>
+            </div>
             <div class='ui-standard-home-buy'>Đặt</div>
             <div class='ui-standard-home-place-cancel'>Hủy</div>
+            <div class='ui-standard-button-grid' style='bottom: 16px; right: 16px;'>
+                <div class='ui-standard-button-grid-icon' style='background-image: url(refresh.svg);'></div>
+                <div class='ui-standard-button-grid-text'>Xoay</div>
+            </div>
         </div>
 
         <h1 style='margin-top: 30px; margin-left: auto; margin-right: auto; width: 100%; text-align: center;'>
@@ -192,13 +213,26 @@
                 <div class='ui-standard-home-value-amount'>
                     2.5M</div>
             </div>
-            <div class='ui-standard-home-zoom'>Thu nhỏ</div>
-            <div class='ui-standard-home-buy' style='display: grid; justify-items: center; align-items: center; font-size: 16px;'>
-                <div style='line-height: normal;'>Mua</div>
+            <div class='ui-standard-button-grid' style='bottom: 16px; left: 16px; width: 55px;'>
+                <div class='ui-standard-button-grid-icon' style='background-image: url(zoom_in.png);'></div>
+                <div class='ui-standard-button-grid-text'>Thu nhỏ</div>
             </div>
-            <div class='ui-standard-home-visit'>Thăm</div>
-            <div class='ui-standard-home-share'>Chia sẻ</div>
-            <div class='ui-standard-home-member'>Mời</div>
+            <div class='ui-standard-button-grid center'>
+                <div id='divBuyIcon' class='ui-standard-button-grid-icon center' style='background-image: url(cart.svg);'></div>
+                <div id='divBuyText' class='ui-standard-button-grid-text center'>Shop</div>
+            </div>
+            <div class='ui-standard-button-grid' style='bottom: 86px; right: 16px;'>
+                <div class='ui-standard-button-grid-icon' style='background-image: url(visit.svg);'></div>
+                <div class='ui-standard-button-grid-text'>Thăm</div>
+            </div>
+            <div class='ui-standard-button-grid' style='bottom: 16px; right: 16px;'>
+                <div class='ui-standard-button-grid-icon' style='background-image: url(share.svg); background-size: 80%;'></div>
+                <div class='ui-standard-button-grid-text'>Chia sẻ</div>
+            </div>
+            <div class='ui-standard-button-grid' style='bottom: 86px; left: 16px;'>
+                <div class='ui-standard-button-grid-icon' style='background-image: url(invite.svg);'></div>
+                <div class='ui-standard-button-grid-text'>Mời</div>
+            </div>
             <div class='ui-standard-home-option-popup'>
                 <div class='ui-standard-home-option-popup-item'>Đổi màu</div>
                 <div class='ui-standard-home-option-popup-item'>Nâng cấp</div>
@@ -234,7 +268,10 @@
                 <div class='ui-standard-home-value-amount'>
                     2.5M</div>
             </div>
-            <div class='ui-standard-home-zoom'>Thu nhỏ</div>
+            <div class='ui-standard-button-grid' style='bottom: 16px; left: 16px; width: 55px;'>
+                <div class='ui-standard-button-grid-icon' style='background-image: url(zoom_in.png);'></div>
+                <div class='ui-standard-button-grid-text'>Phóng to</div>
+            </div>
             <div class='ui-standard-home-buy' style='display: grid; justify-items: center; align-items: center; font-size: 16px;'>
                 <div style='line-height: normal;'>Đổi màu</div>
             </div>
@@ -288,7 +325,10 @@
                 <div class='ui-standard-home-value-amount'>
                     2.5M</div>
             </div>
-            <div class='ui-standard-home-zoom'>Thu nhỏ</div>
+            <div class='ui-standard-button-grid' style='bottom: 16px; left: 16px; width: 55px;'>
+                <div class='ui-standard-button-grid-icon' style='background-image: url(zoom_in.png);'></div>
+                <div class='ui-standard-button-grid-text'>Phóng to</div>
+            </div>
             <div class='ui-standard-home-buy' style='display: grid; justify-items: center; align-items: center; font-size: 16px;'>
                 <div style='line-height: normal;'>Nâng cấp</div>
             </div>
@@ -337,7 +377,10 @@
                 <div class='ui-standard-home-value-amount'>
                     134M</div>
             </div>
-            <div class='ui-standard-home-zoom'>Thu nhỏ</div>
+            <div class='ui-standard-button-grid' style='bottom: 16px; left: 16px; width: 55px;'>
+                <div class='ui-standard-button-grid-icon' style='background-image: url(zoom_in.png);'></div>
+                <div class='ui-standard-button-grid-text'>Phóng to</div>
+            </div>
             <div class='ui-standard-home-buy' style='display: grid; justify-items: center; align-items: center; font-size: 16px;'>
                 <div style='line-height: normal;'>Thả tim!</div>
             </div>

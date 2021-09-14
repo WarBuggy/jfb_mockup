@@ -161,9 +161,12 @@ div.ui-standard-home-zoom {
     position: absolute;
     left: 16px;
     bottom: 16px;
-    width: 48px;
-    height: 48px;
-    background-color: cornflowerblue;
+    width: 32px;
+    height: 32px;
+    background-image: url(zoom_in.png);
+    background-position: center;
+    background-size: contain;
+    background-repeat: no-repeat;
     font-size: 12px;
     font-weight: bold;
     display: grid;
@@ -861,4 +864,50 @@ div.popup-gift-box-top-grid-item-reward-amount {
 
 div.popup-gift-box-top-grid-item-text {
     grid-column: auto / span 2;
+}
+
+div.ui-standard-button-grid {
+    position: absolute;
+    display: grid;
+    grid-template-columns: auto;
+    grid-row-gap: 4px;
+    width: 48px;
+    background-color: rgba(255, 255, 255, 0.5);
+    padding: 4px;
+    border-radius: 8px;
+    border: 1px solid #002395;
+    width: 55px;
+}
+
+div.ui-standard-button-grid-icon {
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    width: 32px;
+    height: 32px;
+    justify-self: center;
+    align-self: center;
+    pointer-events: none;
+}
+
+div.ui-standard-button-grid-text {
+    font-size: 12px;
+    justify-self: center;
+    pointer-events: none;
+}
+
+.ui-standard-button-grid.center {
+    left: 50%;
+    transform: translateX(-50%);
+    bottom: 16px;
+    width: 76px;
+}
+
+.ui-standard-button-grid-icon.center {
+    width: 36px;
+    height: 36px;
+}
+
+.ui-standard-button-grid-text.center {
+    font-size: 16px;
 }
